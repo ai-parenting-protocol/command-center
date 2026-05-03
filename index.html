@@ -749,11 +749,11 @@
         .clause-card { border-radius: 12px; padding: 20px; }
         .clause-elem   { background: #f0fdf4; border: 1px solid #bbf7d0; }
         .clause-middle { background: #eff6ff; border: 1px solid #bfdbfe; }
-        .clause-high   { background: #fdf4ff; border: 1px solid #e9d5ff; }
+        .clause-high   { background: #f0f4ff; border: 1px solid #c7d2fe; }
         .clause-age-badge { font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.07em; display: block; margin-bottom: 12px; }
         .clause-elem   .clause-age-badge { color: #166534; }
         .clause-middle .clause-age-badge { color: #1e40af; }
-        .clause-high   .clause-age-badge { color: #6b21a8; }
+        .clause-high   .clause-age-badge { color: #1e3a8a; }
         .clause-type-label { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #94a3b8; display: block; margin: 12px 0 6px; }
         .clause-card ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 6px; }
         .clause-card ul li { font-size: 0.83rem; color: #334155; line-height: 1.5; padding-left: 12px; position: relative; }
@@ -924,12 +924,13 @@
             <ul>
                 <li id="li-home"         onclick="showTab('home')"         class="active"><i class="fas fa-house"></i> Home</li>
                 <li id="li-audit"        onclick="showTab('audit')"        ><i class="fas fa-microscope"></i> App Audit</li>
-                <li id="li-prompts"      onclick="showTab('prompts')"      ><i class="fas fa-book"></i> Prompt Vault</li>
                 <li id="li-conversation" onclick="showTab('conversation')" ><i class="fas fa-comments"></i> Conversation Guide</li>
-                <li id="li-emergency"    onclick="showTab('emergency')"    ><i class="fas fa-life-ring"></i> Emergency Scripts</li>
-                <li id="li-scripts"      onclick="showTab('scripts')"      ><i class="fas fa-envelope"></i> School Emails</li>
-                <li id="li-disclosure"   onclick="showTab('disclosure')"   ><i class="fas fa-file-lines"></i> Disclosure Kit</li>
+                <li id="li-prompts"      onclick="showTab('prompts')"      ><i class="fas fa-book"></i> Prompt Vault</li>
+                <li id="li-disclosure"   onclick="showTab('disclosure')"   ><i class="fas fa-file-lines"></i> AI Disclosure Guide</li>
+                <li id="li-scripts"      onclick="showTab('scripts')"      ><i class="fas fa-envelope"></i> School Advocacy Scripts</li>
                 <li id="li-constitution" onclick="showTab('constitution')" ><i class="fas fa-scroll"></i> Constitution Builder</li>
+                <li style="padding:8px 15px 2px;font-size:0.62rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.28);cursor:default;margin-top:4px;">Bonus</li>
+                <li id="li-emergency"    onclick="showTab('emergency')"    ><i class="fas fa-life-ring"></i> Emergency Scripts</li>
             </ul>
         </nav>
     </aside>
@@ -967,13 +968,13 @@
 
             <!-- What's Inside -->
             <p style="font-size:0.88rem;background:#f0f7fb;border-left:3px solid #3191b7;border-radius:0 6px 6px 0;padding:9px 14px;margin:0 0 16px;color:#334155;"><strong>New to the dashboard?</strong> Start with the <span class="step-link" onclick="showTab('conversation')" style="color:#3191b7;font-weight:700;text-decoration:underline;cursor:pointer;">Conversation Guide</span> — the opening script on that page is the one thing to say to your child before anything else.</p>
-            <p style="color:#64748b;font-size:0.93rem;margin:0 0 12px;">Seven tools, each mapped to a course module. Click any row to open it — and come back whenever you need them.</p>
+            <p style="color:#64748b;font-size:0.93rem;margin:0 0 12px;">Six tools mapped to your six course modules — click any row to open it and come back whenever you need them.</p>
             <div class="home-tool-list">
                 <div class="home-tool-row" onclick="showTab('audit')">
                     <span class="home-tool-icon">🔬</span>
                     <div class="home-tool-info">
                         <strong>App Audit</strong>
-                        <span>Safety &amp; pedagogy ratings for the top AI apps kids are using — searchable, updated regularly.</span>
+                        <span>Safety &amp; learning ratings for the AI apps your kids are actually using — searchable and updated.</span>
                     </div>
                     <span class="home-tool-module">Module 1</span>
                     <span class="home-tool-arrow">→</span>
@@ -982,7 +983,7 @@
                     <span class="home-tool-icon">💬</span>
                     <div class="home-tool-info">
                         <strong>Conversation Guide</strong>
-                        <span>Opening scripts and 14 battle cards for when the conversation goes sideways.</span>
+                        <span>Opening scripts and battle cards for when the conversation goes sideways.</span>
                     </div>
                     <span class="home-tool-module">Module 2</span>
                     <span class="home-tool-arrow">→</span>
@@ -999,8 +1000,8 @@
                 <div class="home-tool-row" onclick="showTab('disclosure')">
                     <span class="home-tool-icon">📋</span>
                     <div class="home-tool-info">
-                        <strong>Disclosure Kit</strong>
-                        <span>3 completed sample disclosure forms + step-by-step chat export guides for every platform.</span>
+                        <strong>AI Disclosure Guide</strong>
+                        <span>Blank form, 3 completed sample forms, and step-by-step guides to save every AI conversation as evidence.</span>
                     </div>
                     <span class="home-tool-module">Module 4</span>
                     <span class="home-tool-arrow">→</span>
@@ -1008,17 +1009,8 @@
                 <div class="home-tool-row" onclick="showTab('scripts')">
                     <span class="home-tool-icon">✉️</span>
                     <div class="home-tool-info">
-                        <strong>School Liaison</strong>
-                        <span>5 ready-to-send email templates — from proactive check-ins to plagiarism dispute responses.</span>
-                    </div>
-                    <span class="home-tool-module">Module 5</span>
-                    <span class="home-tool-arrow">→</span>
-                </div>
-                <div class="home-tool-row" onclick="showTab('emergency')">
-                    <span class="home-tool-icon">🆘</span>
-                    <div class="home-tool-info">
-                        <strong>Emergency Scripts</strong>
-                        <span>Ready responses for homework meltdowns, school flags, and AI safety concerns — when you need them fast.</span>
+                        <strong>School Advocacy Scripts</strong>
+                        <span>5 ready-to-use scripts for teachers, admins, and IEP coordinators — from proactive outreach to plagiarism disputes.</span>
                     </div>
                     <span class="home-tool-module">Module 5</span>
                     <span class="home-tool-arrow">→</span>
@@ -1030,6 +1022,15 @@
                         <span>6-section family AI agreement with age-specific clauses, conflict protocol, and 10 ritual cards.</span>
                     </div>
                     <span class="home-tool-module">Module 6</span>
+                    <span class="home-tool-arrow">→</span>
+                </div>
+                <div class="home-tool-row" onclick="showTab('emergency')" style="border-top:2px dashed #e2e8f0;background:#fafbfc;">
+                    <span class="home-tool-icon">🆘</span>
+                    <div class="home-tool-info">
+                        <strong>Emergency Scripts</strong>
+                        <span>Ready responses for homework meltdowns, school flags, and AI safety concerns — when you need them fast.</span>
+                    </div>
+                    <span class="home-tool-module" style="color:#40aa78;">Bonus</span>
                     <span class="home-tool-arrow">→</span>
                 </div>
             </div>
@@ -1724,8 +1725,8 @@ Then go slow. Ask one question. Don't pile on. The goal right now is not to solv
 
         <!-- ===================== SCHOOL LIAISON ===================== -->
         <div id="scripts" class="tab-content">
-            <h1>School Liaison</h1>
-            <p class="sub-header">Email templates and advocacy scripts for every school situation — from proactive check-ins to plagiarism disputes.</p>
+            <h1>School Advocacy Scripts</h1>
+            <p class="sub-header">Ready-to-use scripts for teachers, administrators, and IEP coordinators — from proactive outreach to plagiarism disputes.</p>
 
             <!-- How-to Banner -->
             <div class="card how-to-banner">
@@ -1899,8 +1900,8 @@ Best regards,
 
         <!-- ===================== DISCLOSURE KIT ===================== -->
         <div id="disclosure" class="tab-content">
-            <h1>Disclosure Kit</h1>
-            <p class="sub-header">Sample completed AI disclosure forms for common assignment types — plus step-by-step guides to export and save AI conversations as receipts.</p>
+            <h1>AI Disclosure Guide</h1>
+            <p class="sub-header">Sample completed forms for common assignment types — plus step-by-step guides to export and save AI conversations as evidence.</p>
 
             <!-- Intro callout -->
             <div class="start-here-card card" style="margin-bottom:28px;">
@@ -2446,8 +2447,7 @@ Reviews are a conversation, not an interrogation. All family members have a voic
     <footer>
         <div>&copy; 2026 Resonance Connection, LLC</div>
         <div class="footer-links">
-            <a href="#">Support</a>
-            <a href="#">Privacy</a>
+            <a href="mailto:hello@aiparentingprotocol.com?subject=Dashboard%20Feedback">Feedback</a>
         </div>
     </footer>
 
