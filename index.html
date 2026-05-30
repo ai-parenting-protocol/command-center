@@ -924,13 +924,13 @@
             <ul>
                 <li id="li-home"         onclick="showTab('home')"         class="active"><i class="fas fa-house"></i> Home</li>
                 <li id="li-audit"        onclick="showTab('audit')"        ><i class="fas fa-microscope"></i> App Audit</li>
-                <li id="li-conversation" onclick="showTab('conversation')" ><i class="fas fa-comments"></i> Conversation Guide</li>
-                <li id="li-prompts"      onclick="showTab('prompts')"      ><i class="fas fa-book"></i> Prompt Vault</li>
+                <li id="li-conversation" onclick="showTab('conversation')" ><i class="fas fa-comments"></i> Family Talking Points</li>
+                <li id="li-prompts"      onclick="showTab('prompts')"      ><i class="fas fa-book"></i> Interactive Prompt Vault</li>
                 <li id="li-disclosure"   onclick="showTab('disclosure')"   ><i class="fas fa-file-lines"></i> AI Disclosure Guide</li>
                 <li id="li-scripts"      onclick="showTab('scripts')"      ><i class="fas fa-envelope"></i> School Advocacy Scripts</li>
-                <li id="li-constitution" onclick="showTab('constitution')" ><i class="fas fa-scroll"></i> Constitution Builder</li>
+                <li id="li-constitution" onclick="showTab('constitution')" ><i class="fas fa-scroll"></i> AI Family Constitution Builder</li>
                 <li style="padding:8px 15px 2px;font-size:0.62rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.28);cursor:default;margin-top:4px;">Bonus</li>
-                <li id="li-emergency"    onclick="showTab('emergency')"    ><i class="fas fa-life-ring"></i> Emergency Scripts</li>
+                <li id="li-emergency"    onclick="showTab('emergency')"    ><i class="fas fa-life-ring"></i> Emergency Playbook</li>
             </ul>
         </nav>
     </aside>
@@ -967,7 +967,7 @@
             </div>
 
             <!-- What's Inside -->
-            <p style="font-size:0.88rem;background:#f0f7fb;border-left:3px solid #3191b7;border-radius:0 6px 6px 0;padding:9px 14px;margin:0 0 16px;color:#334155;"><strong>New to the dashboard?</strong> Start with the <span class="step-link" onclick="showTab('conversation')" style="color:#3191b7;font-weight:700;text-decoration:underline;cursor:pointer;">Conversation Guide</span> — the opening script on that page is the one thing to say to your child before anything else.</p>
+            <p style="font-size:0.88rem;background:#f0f7fb;border-left:3px solid #3191b7;border-radius:0 6px 6px 0;padding:9px 14px;margin:0 0 16px;color:#334155;"><strong>New to the dashboard?</strong> Start with <span class="step-link" onclick="showTab('conversation')" style="color:#3191b7;font-weight:700;text-decoration:underline;cursor:pointer;">Family Talking Points</span> — the opening script on that page is the one thing to say to your child before anything else.</p>
             <p style="color:#64748b;font-size:0.93rem;margin:0 0 12px;">Six tools mapped to your six course modules — click any row to open it and come back whenever you need them.</p>
             <div class="home-tool-list">
                 <div class="home-tool-row" onclick="showTab('audit')">
@@ -982,7 +982,7 @@
                 <div class="home-tool-row" onclick="showTab('conversation')">
                     <span class="home-tool-icon">💬</span>
                     <div class="home-tool-info">
-                        <strong>Conversation Guide</strong>
+                        <strong>Family Talking Points</strong>
                         <span>Opening scripts and battle cards for when the conversation goes sideways.</span>
                     </div>
                     <span class="home-tool-module">Module 2</span>
@@ -991,8 +991,8 @@
                 <div class="home-tool-row" onclick="showTab('prompts')">
                     <span class="home-tool-icon">📚</span>
                     <div class="home-tool-info">
-                        <strong>Prompt Vault</strong>
-                        <span>50+ Socratic prompts by subject — copy-paste into any AI to turn it into a tutor instantly.</span>
+                        <strong>Interactive Prompt Vault</strong>
+                        <span>50+ copy-paste prompts by subject — turn any AI into a tutor, not a homework-doer, instantly.</span>
                     </div>
                     <span class="home-tool-module">Module 3</span>
                     <span class="home-tool-arrow">→</span>
@@ -1018,7 +1018,7 @@
                 <div class="home-tool-row" onclick="showTab('constitution')">
                     <span class="home-tool-icon">📜</span>
                     <div class="home-tool-info">
-                        <strong>Constitution Builder</strong>
+                        <strong>AI Family Constitution Builder</strong>
                         <span>6-section family AI agreement with age-specific clauses, conflict protocol, and 10 ritual cards.</span>
                     </div>
                     <span class="home-tool-module">Module 6</span>
@@ -1027,8 +1027,8 @@
                 <div class="home-tool-row" onclick="showTab('emergency')" style="border-top:2px dashed #e2e8f0;background:#fafbfc;">
                     <span class="home-tool-icon">🆘</span>
                     <div class="home-tool-info">
-                        <strong>Emergency Scripts</strong>
-                        <span>Ready responses for homework meltdowns, school flags, and AI safety concerns — when you need them fast.</span>
+                        <strong>Emergency Playbook</strong>
+                        <span>Ready responses for when AI gets misused, homework meltdowns, and safety concerns — when you need them fast.</span>
                     </div>
                     <span class="home-tool-module" style="color:#40aa78;">Bonus</span>
                     <span class="home-tool-arrow">→</span>
@@ -1087,7 +1087,7 @@
 
         <!-- ===================== PROMPT VAULT ===================== -->
         <div id="prompts" class="tab-content">
-            <h1>The Prompt Vault</h1>
+            <h1>Interactive Prompt Vault</h1>
             <p class="sub-header">Copy-paste prompts that turn any AI into a tutor — not a homework-doer. 50+ subjects.</p>
 
             <div class="controls-row">
@@ -1178,70 +1178,130 @@ Start by asking: "What are we working on today, and what have you tried so far?"
 
         <!-- ===================== EMERGENCY SCRIPTS ===================== -->
         <div id="emergency" class="tab-content">
-            <h1>Emergency Scripts</h1>
+            <h1>Emergency Playbook</h1>
             <p class="sub-header">Ready-to-use responses for the moments that catch you off guard.</p>
 
             <!-- Quick Jump -->
             <div class="es-jump-row" style="justify-content:space-between;align-items:center;">
                 <div style="display:flex;gap:10px;flex-wrap:wrap;">
-                    <button class="es-jump-btn" onclick="document.getElementById('es-sec-a').scrollIntoView({behavior:'smooth'})">🤔 Homework Unstuck</button>
-                    <button class="es-jump-btn" onclick="document.getElementById('es-sec-b').scrollIntoView({behavior:'smooth'})">📧 School Flag Response</button>
+                    <button class="es-jump-btn" onclick="document.getElementById('es-sec-misuse').scrollIntoView({behavior:'smooth'})">🔍 When AI Was Misused</button>
                     <button class="es-jump-btn" onclick="document.getElementById('es-sec-c').scrollIntoView({behavior:'smooth'})">🚨 AI Safety Concern</button>
+                    <button class="es-jump-btn" onclick="document.getElementById('es-sec-a').scrollIntoView({behavior:'smooth'})">🤔 Homework Unstuck</button>
                 </div>
                 <button class="btn-blue btn-sm" onclick="printEmergencyScripts()" style="white-space:nowrap;">🖨 Print Scripts</button>
             </div>
 
-            <!-- ── Section A: Homework Unstuck ── -->
-            <h2 id="es-sec-a" class="section-heading es-section-heading">Section A: Homework Unstuck</h2>
-            <p class="es-section-intro">For when your child hits a wall. <strong>These prompts are for your child to paste directly into any AI tool</strong> — they get AI back into tutor mode without doing the work for them. To use: open ChatGPT, Gemini, or Claude on their device, tap the message box, and paste the prompt. They take it from there.</p>
+            <!-- ── Section: When Your Child Misused AI ── -->
+            <h2 id="es-sec-misuse" class="section-heading es-section-heading">When Your Child Misused AI</h2>
+            <p class="es-section-intro">For when you get the email or see the 0 in the gradebook. This happened to us with our middle schooler — and it's honestly one of the reasons we built this course. We wanted to help families prevent this moment, and navigate it well if it happens anyway. It became one of the most valuable teaching moments our family has had. Here's exactly what we did and what we'd recommend.</p>
 
-            <div class="es-grid">
+            <div class="card">
+                <span class="es-parent-tag">Parent action guide</span>
+                <h3>🔍 Step 1: Talk to Your Child Before You Do Anything Else</h3>
+                <span class="es-when">Before you respond to the school, before you decide on a consequence — sit with your child and ask them to walk you through what actually happened.</span>
+                <pre id="es-m1">Ask:
+• "Can you show me how you used AI on this assignment?"
+• "Did your teacher say anything about AI before you started? Did they say it was off-limits, or did they not bring it up at all?"
+• "Walk me through what you asked it to do."
 
-                <div class="card">
-                    <span class="es-child-tag">Child pastes into AI</span>
-                    <h3>🤔 I'm Stuck — Give Me a Hint</h3>
-                    <span class="es-when">When to use: Child has tried something but can't get past a specific step</span>
-                    <pre id="es1">I'm stuck and I've tried [describe what you tried]. Can you give me a clue about the next step without solving it for me?</pre>
-                    <button class="copy-btn" onclick="copyText('es1')">Copy Prompt</button>
-                </div>
+How to check the evidence:
+Version history (Google Docs): File > Version history > See version history. Every edit is timestamped. If your child did their own thinking, it'll show. If they pasted AI-generated text in one shot, that'll show too.
 
-                <div class="card">
-                    <span class="es-child-tag">Child pastes into AI</span>
-                    <h3>📖 Show Me One Example</h3>
-                    <span class="es-when">When to use: Child understands the concept but can't execute it</span>
-                    <pre id="es2">I've tried these steps and I'm still confused. Can you show me ONE worked example of a similar problem — not this exact one — and then give me a new problem to try on my own?</pre>
-                    <button class="copy-btn" onclick="copyText('es2')">Copy Prompt</button>
-                </div>
+AI chat history: Open the app they used. ChatGPT, Gemini, and Claude all save recent conversations. Ask your child to open it and scroll back to the assignment.
 
-                <div class="card">
-                    <span class="es-child-tag">Child pastes into AI</span>
-                    <h3>🎮 Explain It Differently</h3>
-                    <span class="es-when">When to use: The standard explanation just isn't clicking</span>
-                    <pre id="es3">I've read the explanation twice and it's not clicking. Can you explain [concept] using an analogy related to [basketball/gaming/cooking/music — whatever your kid is into]? Then quiz me to see if I got it.</pre>
-                    <button class="copy-btn" onclick="copyText('es3')">Copy Prompt</button>
-                </div>
+Whether the teacher said nothing or explicitly said no AI matters — it shapes everything in Step 3.</pre>
+                <button class="copy-btn" onclick="copyText('es-m1')">Copy Guide</button>
+            </div>
 
-                <div class="card">
-                    <span class="es-child-tag">Child pastes into AI</span>
-                    <h3>🧩 This Feels Overwhelming</h3>
-                    <span class="es-when">When to use: The task feels too big to start</span>
-                    <pre id="es4">This feels like too much at once. Can you break this into the 3 smallest possible first steps and just help me with step one?</pre>
-                    <button class="copy-btn" onclick="copyText('es4')">Copy Prompt</button>
-                </div>
+            <div class="card">
+                <span class="es-parent-tag">Parent action guide</span>
+                <h3>🔎 Step 2: What Did You Find?</h3>
+                <span class="es-when">Three possible scenarios — find yours and follow the path.</span>
+                <pre id="es-m2">Option 1: They used AI as a resource, not a replacement.
+They asked it questions, used it to understand a concept, or checked their own work — the thinking was theirs. Go to the AI Disclosure Guide tab. Pull what you can (screenshots, drafts, version history) and bring that to the teacher. You may have more ground to stand on than you think. Scroll down for the "If they used it correctly but still got flagged" scripts.
 
-                <div class="card">
-                    <span class="es-child-tag">Child pastes into AI</span>
-                    <h3>✅ Quiz Me</h3>
-                    <span class="es-when">When to use: Child thinks they understand — time to verify</span>
-                    <pre id="es5">I think I understand this now. Can you quiz me with 3 questions to test if I actually get it? If I get one wrong, don't just tell me the answer — ask me a question to help me figure out where my thinking went wrong.</pre>
-                    <button class="copy-btn" onclick="copyText('es5')">Copy Prompt</button>
-                </div>
+Option 2: They clearly misused it.
+They outsourced the thinking. The work isn't really theirs. Keep reading — Steps 3 and 4 are for you.
 
-            </div><!-- /es-grid A -->
+Option 3: They didn't use AI at all — and got flagged anyway.
+AI detection tools are still imperfect and can produce false positives. This is harder to prove, but not impossible. Ask your child to walk you through their thinking out loud — how they approached it, what they researched, how they wrote it. Check version history if there is one. A child who actually did the work can usually talk through it in a way that a pasted AI response can't replicate. Bring that conversation to the teacher, not as an accusation, but as context.</pre>
+                <button class="copy-btn" onclick="copyText('es-m2')">Copy Guide</button>
+            </div>
 
-            <!-- ── Section B: School Flag Response ── -->
-            <h2 id="es-sec-b" class="section-heading es-section-heading">Section B: School Flag Response</h2>
-            <p class="es-section-intro">For when a teacher flags your child's work. Use these to buy time, gather evidence, and respond calmly — in this order.</p>
+            <div class="card">
+                <span class="es-parent-tag">Parent action guide</span>
+                <h3>📧 Step 3: Contact the Teacher as a Partner</h3>
+                <span class="es-when">Whether they used it correctly or misused it — reach out to the teacher first. Teachers are stretched thin and deal with AI situations constantly. The goal is to advocate for your child without being adversarial. You want them to respond to your kid thoughtfully, which means you lead that way too.</span>
+                <pre id="es-m3">If they misused it — the consequence decision (together with or separate from the teacher) should be based on:
+• How high-stakes was the assignment?
+• Did the teacher explicitly say no AI — or did they never address it?
+• Is this a first offense?
+• What grade and age is your child?
+
+Your options: let the 0 or consequence stand, allow a redo, require a redo with an oral defense.
+
+We let the 0 stand with our middle schooler. First offense, low-stakes assignment — the grade was the lesson. We didn't fight it, and we told him we weren't going to. Then we had the conversation in Step 4.</pre>
+                <button class="copy-btn" onclick="copyText('es-m3')">Copy Guide</button>
+            </div>
+
+            <div class="card">
+                <span class="es-parent-tag">Parent sends to teacher</span>
+                <h3>📧 Email — Accepting the Consequence</h3>
+                <span class="es-when">When to use: You've looked into it, talked to your child, and are not appealing the grade</span>
+                <div class="es-email-subject">Subject: Re: [Assignment Name] — Following Up</div>
+                <pre id="es-m4">Dear [Teacher's name],
+
+Thank you for letting us know about [child's name] and the [assignment]. We looked into it at home and talked with [him/her/them] directly. We're supportive of [him/her/them] taking full responsibility for the consequence and aren't asking you to change anything.
+
+We'd welcome the chance to know what your classroom guidelines around AI look like going forward. We're actively working on this at home and want to make sure we're reinforcing the same expectations.
+
+Thank you for handling this directly with us.
+
+[Your name]</pre>
+                <button class="copy-btn" onclick="copyText('es-m4')">Copy Email</button>
+            </div>
+
+            <div class="card">
+                <span class="es-parent-tag">Parent sends to teacher</span>
+                <h3>📧 Email — Asking About a Redo</h3>
+                <span class="es-when">When to use: High-stakes assignment, gray area, or first offense — you want to open the door</span>
+                <div class="es-email-subject">Subject: Re: [Assignment Name] — Following Up</div>
+                <pre id="es-m5">Dear [Teacher's name],
+
+Thank you for reaching out about [child's name] and the [assignment]. We've had a real conversation at home and [he/she/they] has a clear understanding of where things went wrong.
+
+We're not here to challenge your decision. We do want to ask whether there's any possibility of a redo or a chance to demonstrate what [child's name] actually knows about the material. We understand completely if that's not an option.
+
+We'd also appreciate knowing your AI guidelines for future assignments so we can reinforce the same expectations at home. We want to be on the same page with you.
+
+[Your name]</pre>
+                <button class="copy-btn" onclick="copyText('es-m5')">Copy Email</button>
+            </div>
+
+            <div class="card">
+                <span class="es-parent-tag">Parent says to child</span>
+                <h3>💬 Step 4: The Conversation with Your Child</h3>
+                <span class="es-when">Wait until the dust has settled — not in the heat of the moment. This is the most important part.</span>
+                <pre id="es-m6">"I want to talk about what happened. I'm not trying to make you feel worse — the consequence happened and that's done. I want to make sure you actually understand why it matters."
+
+The core message:
+School isn't about getting the answer. It's about building the skills to think, figure things out, and problem-solve — skills you're going to need for the rest of your life. When AI does the thinking for you, you don't build those skills. You get the grade, but you lose the thing the grade was supposed to represent.
+
+Being resourceful is smart. Looking things up, using tools, asking for help — that's all fine. But there's a line between using AI as a tool and letting it replace your thinking. When AI writes your essay, you didn't write an essay. And eventually, that shows up somewhere it actually counts.
+
+What to connect it to:
+If you've worked through this course together, this is the moment to tie it all back. Walk through the Family Talking Points together. Review the AI Disclosure Guide. If you haven't built your AI Family Constitution yet, this is a good moment to start — let this be the reason.
+
+How to close it:
+"And if you're thinking 'others use AI for everything in the real world' — you're right. Many adults use it to write books, start businesses, think through strategy, build websites, and get more done in less time. That's real, and outside of school I'd actually encourage you to explore what it can do and how it can help you.
+
+But here's the difference: in school, the goal isn't to produce something. It's to become someone who knows how to think. Once you have that foundation, AI makes you more capable. Without it, AI just does things you can't actually do yourself yet — and that gap catches up with you eventually."</pre>
+                <button class="copy-btn" onclick="copyText('es-m6')">Copy Script</button>
+            </div>
+
+            <!-- ── If They Used It Correctly ── -->
+            <h3 style="margin:32px 0 8px;color:#3191b7;font-size:1rem;font-weight:700;font-family:'IBM Plex Sans',sans-serif;">📋 If They Used It Correctly but Still Got Flagged</h3>
+            <p class="es-section-intro" style="margin-bottom:16px;">If Step 2 revealed that your child used AI as a tool and the thinking was genuinely theirs — use these scripts to present the evidence to the teacher. Use them in this order.</p>
 
             <div class="card">
                 <span class="es-parent-tag">Parent sends to teacher</span>
@@ -1288,8 +1348,8 @@ Is there anything else that would be helpful?"</pre>
                 <button class="copy-btn" onclick="copyText('es8')">Copy Script</button>
             </div>
 
-            <!-- ── Section C: AI Safety Concern ── -->
-            <h2 id="es-sec-c" class="section-heading es-section-heading">Section C: AI Safety Concern</h2>
+            <!-- ── AI Safety Concern ── -->
+            <h2 id="es-sec-c" class="section-heading es-section-heading">AI Safety Concern</h2>
             <p class="es-section-intro">For when AI says something it shouldn't — or when you discover something concerning. Stay calm. These scripts keep the door open.</p>
 
             <div class="es-grid">
@@ -1310,7 +1370,7 @@ Is there anything else that would be helpful?"</pre>
                     <button class="copy-btn" onclick="copyText('es10')">Copy Script</button>
                 </div>
 
-            </div><!-- /es-grid C -->
+            </div><!-- /es-grid safety -->
 
             <div class="card">
                 <span class="es-safety-tag">Parent action guide</span>
@@ -1328,11 +1388,59 @@ Step 5: If the content involves self-harm or safety threats, contact the platfor
                 <button class="copy-btn" onclick="copyText('es11')">Copy Guide</button>
             </div>
 
+            <!-- ── Homework Unstuck ── -->
+            <h2 id="es-sec-a" class="section-heading es-section-heading">Getting Unstuck on Homework</h2>
+            <p class="es-section-intro">For when your child hits a wall. <strong>These prompts are for your child to paste directly into any AI tool</strong> — they get AI back into tutor mode without doing the work for them. To use: open ChatGPT, Gemini, or Claude on their device, tap the message box, and paste the prompt. They take it from there.</p>
+
+            <div class="es-grid">
+
+                <div class="card">
+                    <span class="es-child-tag">Child pastes into AI</span>
+                    <h3>🤔 I'm Stuck — Give Me a Hint</h3>
+                    <span class="es-when">When to use: Child has tried something but can't get past a specific step</span>
+                    <pre id="es1">I'm stuck and I've tried [describe what you tried]. Can you give me a clue about the next step without solving it for me?</pre>
+                    <button class="copy-btn" onclick="copyText('es1')">Copy Prompt</button>
+                </div>
+
+                <div class="card">
+                    <span class="es-child-tag">Child pastes into AI</span>
+                    <h3>📖 Show Me One Example</h3>
+                    <span class="es-when">When to use: Child understands the concept but can't execute it</span>
+                    <pre id="es2">I've tried these steps and I'm still confused. Can you show me ONE worked example of a similar problem — not this exact one — and then give me a new problem to try on my own?</pre>
+                    <button class="copy-btn" onclick="copyText('es2')">Copy Prompt</button>
+                </div>
+
+                <div class="card">
+                    <span class="es-child-tag">Child pastes into AI</span>
+                    <h3>🎮 Explain It Differently</h3>
+                    <span class="es-when">When to use: The standard explanation just isn't clicking</span>
+                    <pre id="es3">I've read the explanation twice and it's not clicking. Can you explain [concept] using an analogy related to [basketball/gaming/cooking/music — whatever your kid is into]? Then quiz me to see if I got it.</pre>
+                    <button class="copy-btn" onclick="copyText('es3')">Copy Prompt</button>
+                </div>
+
+                <div class="card">
+                    <span class="es-child-tag">Child pastes into AI</span>
+                    <h3>🧩 This Feels Overwhelming</h3>
+                    <span class="es-when">When to use: The task feels too big to start</span>
+                    <pre id="es4">This feels like too much at once. Can you break this into the 3 smallest possible first steps and just help me with step one?</pre>
+                    <button class="copy-btn" onclick="copyText('es4')">Copy Prompt</button>
+                </div>
+
+                <div class="card">
+                    <span class="es-child-tag">Child pastes into AI</span>
+                    <h3>✅ Quiz Me</h3>
+                    <span class="es-when">When to use: Child thinks they understand — time to verify</span>
+                    <pre id="es5">I think I understand this now. Can you quiz me with 3 questions to test if I actually get it? If I get one wrong, don't just tell me the answer — ask me a question to help me figure out where my thinking went wrong.</pre>
+                    <button class="copy-btn" onclick="copyText('es5')">Copy Prompt</button>
+                </div>
+
+            </div><!-- /es-grid homework -->
+
         </div><!-- /emergency -->
 
         <!-- ===================== CONVERSATION GUIDE ===================== -->
         <div id="conversation" class="tab-content">
-            <h1>Conversation Guide</h1>
+            <h1>Family Talking Points</h1>
             <p class="sub-header">Scripts and battle cards for starting — and surviving — the AI conversation with your kids.</p>
 
             <!-- Start Here Framing Card -->
@@ -2092,57 +2200,54 @@ Parent/Guardian: _________________  Date: ____________</pre>
             </div><!-- /forms grid -->
 
             <!-- Section: Chat Export Guides -->
-            <h2 style="margin-bottom:8px;">📤 How to Export & Save AI Conversations</h2>
-            <p style="color:#64748b;font-size:0.93rem;margin-bottom:20px;">Save a copy of every AI session used for schoolwork. This is your child's "receipt" — proof of how AI was used, in case anyone asks.</p>
+            <h2 style="margin-bottom:8px;">📤 How to Export &amp; Save AI Conversations</h2>
+            <p style="color:#64748b;font-size:0.93rem;margin-bottom:8px;">Save a copy of every AI session used for schoolwork. This is your child's "receipt" — proof of how AI was used, in case anyone asks.</p>
+            <div style="background:#fefce8;border-left:3px solid #eab308;border-radius:0 6px 6px 0;padding:10px 14px;margin-bottom:20px;font-size:0.87rem;color:#713f12;"><strong>Honest note:</strong> Export features on all three platforms can be inconsistent depending on your account type and device. Try the steps below first — if they don't work, screenshots are just as valid and often cleaner. When in doubt, screenshot everything before you close the app.</div>
 
             <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;">
 
                 <div class="card">
                     <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
                         <span style="font-size:1.6rem;">💬</span>
-                        <h3 style="margin:0;">ChatGPT Export</h3>
+                        <h3 style="margin:0;">ChatGPT</h3>
                     </div>
                     <ol style="padding-left:18px;color:#475569;font-size:0.9rem;line-height:1.9;">
                         <li>Open the conversation in ChatGPT</li>
-                        <li>Click the <strong>Share</strong> icon (top-right, looks like a box with an arrow)</li>
-                        <li>Select <strong>"Copy Link"</strong> to get a shareable URL</li>
-                        <li>Alternatively: right-click anywhere → <strong>Print</strong> → <strong>Save as PDF</strong></li>
+                        <li>Click the <strong>Share</strong> icon (top-right, box with an arrow)</li>
+                        <li>Select <strong>"Copy Link"</strong> to get a shareable URL — this is the cleanest option if it's available</li>
+                        <li>If Share isn't visible: right-click anywhere on the page → <strong>Print</strong> → <strong>Save as PDF</strong></li>
                         <li>Name the file: <em>LastName_Assignment_AIReceipt.pdf</em></li>
-                        <li>Attach alongside the submitted assignment</li>
                     </ol>
-                    <div style="margin-top:12px;background:#f0f9ff;border-radius:6px;padding:10px;font-size:0.82rem;color:#0369a1;"><strong>Pro tip:</strong> The Share link captures the full conversation history including timestamps.</div>
+                    <div style="margin-top:12px;background:#f0fdf4;border-radius:6px;padding:10px;font-size:0.82rem;color:#166534;border-left:3px solid #40aa78;"><strong>Screenshot fallback:</strong> If neither option works, screenshot each part of the conversation. iOS: Side + Volume Up. Android: Power + Volume Down.</div>
                 </div>
 
                 <div class="card">
                     <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
                         <span style="font-size:1.6rem;">🤖</span>
-                        <h3 style="margin:0;">Claude Export</h3>
+                        <h3 style="margin:0;">Claude</h3>
                     </div>
                     <ol style="padding-left:18px;color:#475569;font-size:0.9rem;line-height:1.9;">
                         <li>Open the conversation on claude.ai</li>
-                        <li>Click the <strong>⋯ (three dots)</strong> menu next to the conversation title</li>
-                        <li>Look for <strong>"Export"</strong> or use browser Print (⌘P / Ctrl+P)</li>
-                        <li>Choose <strong>Save as PDF</strong> in the print dialog</li>
-                        <li>Review the PDF — it will show all prompts and responses with timestamps</li>
+                        <li>Use browser Print: <strong>⌘P (Mac) or Ctrl+P (Windows)</strong></li>
+                        <li>In the print dialog, choose <strong>Save as PDF</strong> as the destination</li>
+                        <li>The PDF will show all prompts and responses in order</li>
                         <li>Name and file it with the assignment</li>
                     </ol>
-                    <div style="margin-top:12px;background:#f0f9ff;border-radius:6px;padding:10px;font-size:0.82rem;color:#0369a1;"><strong>Pro tip:</strong> Claude shows conversation history in the left sidebar — each project or chat is separate.</div>
+                    <div style="margin-top:12px;background:#f0fdf4;border-radius:6px;padding:10px;font-size:0.82rem;color:#166534;border-left:3px solid #40aa78;"><strong>Note:</strong> Claude doesn't have a dedicated export button — browser print to PDF is the standard method. Each conversation is saved separately in the left sidebar.</div>
                 </div>
 
                 <div class="card">
                     <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
                         <span style="font-size:1.6rem;">✨</span>
-                        <h3 style="margin:0;">Gemini / Google AI Export</h3>
+                        <h3 style="margin:0;">Gemini</h3>
                     </div>
                     <ol style="padding-left:18px;color:#475569;font-size:0.9rem;line-height:1.9;">
                         <li>Open the Gemini conversation at gemini.google.com</li>
-                        <li>Click the <strong>Share &amp; Export</strong> button (top-right area)</li>
-                        <li>Choose <strong>"Export to Google Docs"</strong> for a clean editable copy</li>
-                        <li>Or use File → Print → Save as PDF directly from the browser</li>
-                        <li>The Google Doc version preserves formatting better for submission</li>
-                        <li>Share the Doc link with the teacher or attach the PDF</li>
+                        <li>Look for a <strong>Share &amp; Export</strong> button (top-right) — if visible, choose <strong>"Export to Google Docs"</strong></li>
+                        <li>If that option isn't there (common on school and Workspace accounts): use browser Print → <strong>Save as PDF</strong></li>
+                        <li>Share the Doc link or attach the PDF alongside the assignment</li>
                     </ol>
-                    <div style="margin-top:12px;background:#f0f9ff;border-radius:6px;padding:10px;font-size:0.82rem;color:#0369a1;"><strong>Pro tip:</strong> "Export to Docs" is the cleanest option — it's already in the Google ecosystem teachers use.</div>
+                    <div style="margin-top:12px;background:#fefce8;border-radius:6px;padding:10px;font-size:0.82rem;color:#713f12;border-left:3px solid #eab308;"><strong>Heads up:</strong> "Export to Google Docs" is missing or unreliable on many school and personal accounts. If it's not there, screenshots or browser print to PDF work just as well.</div>
                 </div>
 
                 <div class="card">
@@ -2158,7 +2263,7 @@ Parent/Guardian: _________________  Date: ____________</pre>
                         <li>On Android: PDFs save automatically to Downloads</li>
                         <li>Email the PDF to a parent or teacher email for safekeeping</li>
                     </ol>
-                    <div style="margin-top:12px;background:#fefce8;border-radius:6px;padding:10px;font-size:0.82rem;color:#713f12;"><strong>Habit tip:</strong> Have your child save the receipt BEFORE closing the app — it's easy to forget once the conversation is buried.</div>
+                    <div style="margin-top:12px;background:#fefce8;border-radius:6px;padding:10px;font-size:0.82rem;color:#713f12;"><strong>Habit tip:</strong> Save the receipt BEFORE closing the app — it's easy to forget once the conversation is buried.</div>
                 </div>
 
             </div><!-- /export guides -->
@@ -2167,7 +2272,7 @@ Parent/Guardian: _________________  Date: ____________</pre>
 
         <!-- ===================== CONSTITUTION BUILDER ===================== -->
         <div id="constitution" class="tab-content">
-            <h1>Constitution Builder</h1>
+            <h1>AI Family Constitution Builder</h1>
             <p class="sub-header">Build your family's AI home agreement — six sections, age-specific clauses, and rituals to make it stick.</p>
 
             <!-- Intro callout -->
@@ -2753,7 +2858,7 @@ Reviews are a conversation, not an interrogation. All family members have a voic
                     </div>`;
                 });
             });
-            const html = `<!DOCTYPE html><html><head><title>Emergency Scripts — AI Parenting Protocol</title>
+            const html = `<!DOCTYPE html><html><head><title>Emergency Playbook — AI Parenting Protocol</title>
             <style>
                 *{box-sizing:border-box;margin:0;padding:0}
                 body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;padding:28px;color:#334155;font-size:12px;max-width:800px;margin:0 auto}
@@ -2767,7 +2872,7 @@ Reviews are a conversation, not an interrogation. All family members have a voic
                 footer{margin-top:28px;padding-top:12px;border-top:1px solid #e2e8f0;font-size:10px;color:#94a3b8;text-align:center}
                 @media print{body{padding:16px}}
             </style></head><body>
-            <h1>Emergency Scripts</h1>
+            <h1>Emergency Playbook</h1>
             <p class="sub">AI Parenting Protocol — Ready-to-use responses for the moments that catch you off guard.</p>
             ${body}
             <footer>AI Parenting Protocol &copy; 2026 Resonance Connection, LLC</footer>
