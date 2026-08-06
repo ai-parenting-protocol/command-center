@@ -527,13 +527,6 @@
         .check-content em { font-style: normal; color: var(--accent-blue); font-weight: 600; }
         .affiliate-note { font-size: 0.78rem; color: #94a3b8; margin-top: 14px; font-style: italic; }
 
-        /* Liaison Lab callout */
-        .liaison-callout {
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-            border: 1px solid #bbf7d0;
-        }
-        .liaison-callout h2 { color: #167147; margin-bottom: 10px; font-size: 1.4rem; }
-        .liaison-callout p  { color: #334155; margin-bottom: 14px; }
         .btn-green {
             background: var(--brand-green);
             color: white;
@@ -825,6 +818,8 @@
             .es-jump-row { gap: 8px; }
             .es-jump-btn { font-size: 0.8rem; padding: 7px 14px; }
 
+            .prompt-setup-grid { grid-template-columns: 1fr !important; }
+
             .constitution-doc-header { flex-direction: column; align-items: flex-start; }
 
             .how-to-step-num { width: 24px; height: 24px; font-size: 0.75rem; }
@@ -946,7 +941,7 @@
 
             <!-- Welcome Block -->
             <div class="home-welcome">
-                <h1>Welcome to Your AI Parenting Hub</h1>
+                <h1>Welcome to Your AI Parenting Command Center</h1>
                 <p class="home-welcome-body">Thank you for being here — this dashboard is your one-stop hub for everything in the AI Parenting Protocol. No separate handouts, no PDFs to track down. It's all here, interactive and ready to use.</p>
                 <div class="home-persona-row">
                     <div class="home-persona-card">
@@ -1035,13 +1030,6 @@
                 </div>
             </div>
 
-            <!-- Liaison Lab -->
-            <div class="card liaison-callout">
-                <h2>Want to stay ahead as AI keeps changing?</h2>
-                <p>New apps drop every week. Policies shift. Your kids discover something new before you've heard of it. The AI Liaison Lab is where Nick shares monthly app vibe-checks, real-time alerts, and a community of parents figuring this out together.</p>
-                <button class="btn-green" onclick="showToast('The AI Liaison Lab is coming soon! Members get early access and monthly updates. Stay tuned — announcement coming shortly.')">Learn More About the Liaison Lab →</button>
-                <p class="callout-note">Members get first access to dashboard updates and new content as it's added.</p>
-            </div>
 
         </div><!-- /home -->
 
@@ -1106,19 +1094,16 @@
                 </div>
             </div>
 
-            <!-- Orientation sentence -->
-            <p style="font-size:0.9rem;color:#475569;background:#f0fdf4;border-left:3px solid #40aa78;border-radius:0 6px 6px 0;padding:10px 14px;margin-bottom:20px;"><strong>How to use this:</strong> Find a subject your child is working on, copy the prompt below, and paste it into ChatGPT or Gemini on your child's device. The prompt does the rest — your child just starts typing their homework question.</p>
+            <!-- Setup Cards: 3 across -->
+            <div class="prompt-setup-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:24px;align-items:start;">
 
-            <!-- Pinned: Set Up Tutor Mode Once -->
-            <div class="card" style="border:2px solid var(--brand-green);margin-bottom:24px;position:relative;">
-                <div style="position:absolute;top:-1px;left:20px;background:var(--brand-green);color:white;font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.07em;padding:3px 10px;border-radius:0 0 6px 6px;">📌 Start Here — Do This Once</div>
-                <div style="margin-top:14px;">
-                    <div class="prompt-header">
-                        <h3>🎓 Set Up Tutor Mode Once</h3>
-                        <span class="category-tag">Master Setup</span>
-                    </div>
-                    <p style="font-size:0.88rem;color:#64748b;margin-bottom:10px;">Paste this into ANY AI tool (ChatGPT, Claude, Gemini — anything) at the start of a new session. It locks the AI into tutor mode for the entire conversation so your child never has to re-explain the rules. Do this once per session — takes 30 seconds.</p>
-                    <pre id="tutor-mode-setup">You are a Socratic tutor helping a [GRADE] student with [SUBJECT]. Your rules for this entire conversation:
+                <!-- Card 1: Start Here -->
+                <div class="card" style="border:2px solid var(--brand-green);position:relative;margin-bottom:0;">
+                    <div style="position:absolute;top:-1px;left:16px;background:var(--brand-green);color:white;font-size:0.65rem;font-weight:800;text-transform:uppercase;letter-spacing:0.07em;padding:3px 10px;border-radius:0 0 6px 6px;">📌 Start Here</div>
+                    <div style="margin-top:18px;">
+                        <h3 style="font-size:0.92rem;margin-bottom:5px;">🎓 Set Up Tutor Mode</h3>
+                        <p style="font-size:0.8rem;color:#64748b;margin-bottom:10px;line-height:1.5;">Paste into any AI at the start of a session — locks it into tutor mode for the whole conversation. Do this once per session.</p>
+                        <pre id="tutor-mode-setup" style="font-size:0.76rem;">You are a Socratic tutor helping a [GRADE] student with [SUBJECT]. Your rules for this entire conversation:
 
 1. NEVER give a direct answer to a homework question. Always respond with a guiding question instead.
 2. If the student gets stuck, give a hint — not the answer.
@@ -1127,48 +1112,42 @@
 5. At the end of the session, give a 3-sentence summary of what the student learned today.
 
 Start by asking: "What are we working on today, and what have you tried so far?"</pre>
-                    <button class="copy-btn" onclick="copyText('tutor-mode-setup')">Copy Master Prompt</button>
-                </div>
-            </div>
-
-            <!-- Install Levels 2 & 3 -->
-            <div class="card" style="margin-bottom:24px;">
-                <h3 style="margin-bottom:4px;">⚙️ Skip the Daily Paste — Adjust Your App Settings</h3>
-                <p style="color:#64748b;font-size:0.88rem;margin-bottom:16px;">The Master Prompt above works for one session. These two options reduce the friction — set it once and your child doesn't have to copy anything.</p>
-
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-
-                    <div style="border:1px solid #e2e8f0;border-radius:10px;padding:14px;">
-                        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-                            <span style="background:var(--primary-navy);color:white;font-size:0.7rem;font-weight:800;padding:2px 8px;border-radius:20px;">Level 2</span>
-                            <strong style="color:var(--primary-navy);font-size:0.9rem;">App Settings Overlay</strong>
-                        </div>
-                        <p style="font-size:0.82rem;color:#64748b;margin-bottom:10px;line-height:1.5;">Paste once into the app's Custom Instructions so tutor mode applies to every conversation automatically.</p>
-                        <pre id="system-overlay-prompt" style="font-size:0.78rem;">Act as a Socratic Tutor for any educational, homework, or skill-building questions. Do not give the final answer — instead, ask one guiding question at a time to help the student think through the problem. For simple non-school questions (facts, weather, pop culture), respond normally.</pre>
-                        <button class="copy-btn" onclick="copyText('system-overlay-prompt')" style="margin:8px 0 10px;">Copy Prompt</button>
-                        <div style="background:#f8fafc;border-radius:6px;padding:10px;font-size:0.8rem;color:#475569;line-height:1.7;">
-                            💬 <strong>ChatGPT:</strong> Settings → Personalization → Custom Instructions<br>
-                            ✨ <strong>Gemini:</strong> Settings → Your instructions for Gemini<br>
-                            🤖 <strong>Claude:</strong> Profile → Settings → Personalization
-                        </div>
+                        <button class="copy-btn" onclick="copyText('tutor-mode-setup')">Copy Master Prompt</button>
                     </div>
-
-                    <div style="border:1px solid #e2e8f0;border-radius:10px;padding:14px;">
-                        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-                            <span style="background:var(--brand-green);color:white;font-size:0.7rem;font-weight:800;padding:2px 8px;border-radius:20px;">Level 3</span>
-                            <strong style="color:var(--primary-navy);font-size:0.9rem;">Build a Dedicated Study Bot</strong>
-                        </div>
-                        <p style="font-size:0.82rem;color:#64748b;margin-bottom:10px;line-height:1.5;">Create a custom GPT or Gem named "Biology Coach" or "Essay Partner" — tutor mode baked in, syllabus uploadable.</p>
-                        <pre id="dedicated-bot-prompt" style="font-size:0.78rem;">You are a Socratic tutor for [SUBJECT]. Student is in [GRADE]. Never give direct answers — ask one guiding question at a time. Offer a hint after 3 stuck attempts. End each session: "Here's what you figured out today: [insight]." Start: "What are we working on, and what have you tried?"</pre>
-                        <button class="copy-btn" onclick="copyText('dedicated-bot-prompt')" style="margin:8px 0 10px;">Copy Bot Prompt</button>
-                        <div style="background:#f0fdf4;border-radius:6px;padding:10px;font-size:0.8rem;color:#14532d;line-height:1.6;">
-                            💬 <strong>ChatGPT:</strong> Explore GPTs → Create<br>
-                            ✨ <strong>Gemini:</strong> Gems → New Gem<br>
-                            Paste prompt, name it, optionally upload their syllabus.
-                        </div>
-                    </div>
-
                 </div>
+
+                <!-- Card 2: Level 2 -->
+                <div class="card" style="margin-bottom:0;">
+                    <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                        <span style="background:var(--primary-navy);color:white;font-size:0.68rem;font-weight:800;padding:2px 8px;border-radius:20px;">Level 2</span>
+                        <strong style="color:var(--primary-navy);font-size:0.88rem;">App Settings Overlay</strong>
+                    </div>
+                    <p style="font-size:0.8rem;color:#64748b;margin-bottom:10px;line-height:1.5;">Paste once into Custom Instructions — tutor mode applies to every conversation automatically. No daily paste needed.</p>
+                    <pre id="system-overlay-prompt" style="font-size:0.76rem;">Act as a Socratic Tutor for any educational, homework, or skill-building questions. Do not give the final answer — instead, ask one guiding question at a time to help the student think through the problem. For simple non-school questions (facts, weather, pop culture), respond normally.</pre>
+                    <button class="copy-btn" onclick="copyText('system-overlay-prompt')" style="margin:8px 0 10px;">Copy Prompt</button>
+                    <div style="background:#f8fafc;border-radius:6px;padding:10px;font-size:0.78rem;color:#475569;line-height:1.7;">
+                        💬 <strong>ChatGPT:</strong> Settings → Personalization → Custom Instructions<br>
+                        ✨ <strong>Gemini:</strong> Settings → Your instructions for Gemini<br>
+                        🤖 <strong>Claude:</strong> Profile → Settings → Personalization
+                    </div>
+                </div>
+
+                <!-- Card 3: Level 3 -->
+                <div class="card" style="margin-bottom:0;">
+                    <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                        <span style="background:var(--brand-green);color:white;font-size:0.68rem;font-weight:800;padding:2px 8px;border-radius:20px;">Level 3</span>
+                        <strong style="color:var(--primary-navy);font-size:0.88rem;">Build a Dedicated Study Bot</strong>
+                    </div>
+                    <p style="font-size:0.8rem;color:#64748b;margin-bottom:10px;line-height:1.5;">Create a custom GPT or Gem — "Biology Coach" or "Essay Partner" — with tutor mode baked in and syllabus uploadable.</p>
+                    <pre id="dedicated-bot-prompt" style="font-size:0.76rem;">You are a Socratic tutor for [SUBJECT]. Student is in [GRADE]. Never give direct answers — ask one guiding question at a time. Offer a hint after 3 stuck attempts. End each session: "Here's what you figured out today: [insight]." Start: "What are we working on, and what have you tried?"</pre>
+                    <button class="copy-btn" onclick="copyText('dedicated-bot-prompt')" style="margin:8px 0 10px;">Copy Bot Prompt</button>
+                    <div style="background:#f0fdf4;border-radius:6px;padding:10px;font-size:0.78rem;color:#14532d;line-height:1.6;">
+                        💬 <strong>ChatGPT:</strong> Explore GPTs → Create<br>
+                        ✨ <strong>Gemini:</strong> Gems → New Gem<br>
+                        Paste prompt, name it, optionally upload their syllabus.
+                    </div>
+                </div>
+
             </div>
 
             <div class="prompt-grid" id="promptGrid">
